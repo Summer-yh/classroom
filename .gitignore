@@ -1,0 +1,8 @@
+*.DS_Store
+*.db
+*.svn
+*.swp
+*.swn
+*.swo
+*.bat
+node_modules
