@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>hello world</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="1" />
+    <meta name="description" content="1" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+</head>
+
+<body>
+    <div class="wrapper" id="wrap">
+        <nav class="nav_bar">
+            <ul>
+                <li>首页</li>
+                <li>党校课堂</li>
+                <li>时事</li>
+                <li>专题时刊</li>
+            </ul>
+        </nav>
+        <div>
+            {{#if user}}
+                <span><a title="用户名" href="#">{{name}}</a></span>
+                <span><a title="学号" href="#">{{studentId}}</a></span>
+                <span><a title="状态" href="#">{{status}}</a></span>
+            {{else}}
+                <span><a title="用户名" href="#">{{name}}</a></span>
+                <span><a title="用户名" href="#">{{name}}</a></span>
+
+        </div>
+        {{{body}}}
+    </div>
+
+</body>
+
+</html>

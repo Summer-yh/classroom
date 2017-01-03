@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
-app.use('/static', express.static('public'));
+// app.use('/static', express.static('public'));
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
@@ -45,6 +45,12 @@ if (app.get('env') === 'development') {
         });
     });
 }
+
+app.use(function(req, res, next) {
+    res.status(404);
+    res.render('404');
+});
+
 
 // production error handler
 // no stacktraces leaked to user
