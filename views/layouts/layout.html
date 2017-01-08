@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>{{title}}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="1" />
+    <meta name="description" content="1" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/layout.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/{{stylesheet}}.css">
+</head>
+
+<body>
+    <div class="wrapper" id="wrap">
+        <nav class="nav_bar clearfix">
+            <ul class="nav_bar_ul">
+                <li><a class="nav_bar_item" href="#">首页</a></li>
+                <li><a class="nav_bar_item" href="#">党校课堂</a></li>
+                <li><a class="nav_bar_item" href="#">时事</a></li>
+                <li><a class="nav_bar_item" href="#">专题时刊</a></li>
+                <li><a class="nav_bar_item" href="#">个人中心</a></li>
+            </ul>
+        </nav>
+        <div class="user_section">
+            <div class="line"></div>
+            <section class="log_info">
+                <h2>Login</h2>
+                <form action="#" method="post">
+                    <input class="user_log_info" type="text" required="required" placeholder="学号" name="u">
+                    <input class="user_log_info" type="password" required="required" placeholder="密码" name="p">
+                    <input class="btn_submit" type="submit">
+                </form>
+            </section>
+            <section class="main_info">
+                <img class="user_img" src="/images/1.jpg">
+                <div class="user_name">何宇虹</div>
+                <div class="user_class_info">
+                    <div class="user_class">已完成：<span class="class_done">135</span></div>
+                    <div class="user_number">积分：<span class="class_number">153655</span></div>
+                </div>
+            </section>
+            <div class="line"></div>
+            <section class="other_info">
+                <p class="user_info user_id">学号：<span>201330330103</span></p>
+                <p class="user_info user_sex">性别：<span>女</span></p>
+                <p class="user_info user_stel">手机：<span>18814127584</span></p>
+                <p class="user_info user_status">身份：<span>入党积极分子</span></p>
+                <p class="user_info user_sectiongrade">年级：<span>2013级</span></p>
+                <p class="user_info user_smarjor">专业：<span>软件工程</span></p>
+                <p class="user_info user_sclass">班级：<span>1班</span></p>
+            </section>
+        </div>
+        <div class="container">
+            {{{body}}}
+        </div>
+    </div>
+</body>
+</html>
