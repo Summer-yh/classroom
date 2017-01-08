@@ -6,3 +6,5 @@
 *.swo
 *.bat
 node_modules
+gulpfile.js
+package.json
