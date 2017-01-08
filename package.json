@@ -13,7 +13,7 @@
   },
   "license": "ISC",
   "scripts": {
-    "start": "nodejs ./bin/www"
+    "start": "node ./bin/www"
   },
   "dependencies": {
     "body-parser": "~1.0.0",
