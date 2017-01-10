@@ -5,7 +5,13 @@ var router = express.Router();
 router.get('/', function(req, res) {
   res.render('index', {
     title: 'Express',
-    stylesheet: 'index'
+    stylesheet: 'index',
+    waha: [
+    {title:'hahaha',content:'54545'},
+    {title:'haha',content:'54545'},
+    {title:'hha',content:'54545'},
+    {title:'aha',content:'54545'}
+    ]
 });
 });
 
