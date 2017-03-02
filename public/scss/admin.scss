@@ -1,0 +1,181 @@
+@import 'common';
+.aside_bar{
+    float: left;
+    width: 20%;
+    height: 100%;
+    border: 1px solid red;
+}
+.aside_content{
+    float: right;
+    width: 75%;
+    height: 100%;
+    border: 1px solid blue;
+}
+.aside_bar_item{
+    border: 1px solid blue;
+    text-align: center;
+    cursor: pointer;
+    @include btn($height:30px,$width:auto,$radius:0px,$padding:(0 0 0 0),$bgcolor:#fff,$color:#000)
+}
+.aside_bar_item:hover{
+    background-color: #ff9;
+}
+.icon{
+    display: inline-block;
+    border: 1px solid blue;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    @include background('/images/1.jpg');
+}
+.aside_content_item{
+    padding:20px 10px;
+}
+.choose_bar{
+    height: 35px;
+    border-bottom: 1px solid #555;
+    line-height: 35px;
+    margin-bottom: 10px;
+}
+.select_year,.select_number,.sure_btn{
+    margin: 0 10px;
+    @include btn($height:25px,$width:auto,$radius:(5px 5px 0 0),$padding:(0 5px 0 5px),$bgcolor:#fff,$color:#000);
+    font-weight: bold;
+}
+.sure_btn{
+    cursor: pointer;
+    border: 1px solid #555;
+}
+
+.content_nav,.content_item{
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid red;
+
+}
+.choose_content span+span{
+    border-right: 1px solid yellow;
+
+}
+.x_small_col{
+    display: inline-block;
+    width: 40px;
+    text-align: center;
+    border: 1px solid red;
+
+}
+.small_col{
+    display: inline-block;
+    width: 60px;
+    text-align: center;
+    border: 1px solid red;
+
+
+}
+.x_large_col{
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+    border: 1px solid red;
+
+}
+.large_col{
+    display: inline-block;
+    width: 105px;
+    text-align: center;
+
+}
+.panel_2{
+    .menber_list{
+        float: left;
+        width: 450px;
+        height: 520px;
+        border: 1px solid red;
+        p{
+            background-color: #ff9;
+            padding: 5px 0;
+        }
+        .large_col{
+            width: 250px;
+
+        }
+        .small_col{
+            width: 100px;
+
+        }
+    }
+    .menber_add{
+        float: right;
+        width: 450px;
+        height: 500px;
+        padding-top: 15px;
+        border: 1px solid red;
+        text-align: center;
+    }
+    .menber_add_list{
+        width: 420px;
+        padding: 10px 0;
+        height: 430px;
+        border: 1px solid red;
+        margin: auto;
+        overflow-x: hidden;
+        overflow-y: visible;
+        p{
+            background-color: #ff9;
+            padding: 5px 0;
+        }
+        .large_col{
+            width: 160px;
+
+        }
+        .small_col{
+            width: 60px;
+
+        }
+    }
+    .sure_btn{
+        margin: 10px auto;
+        @include btn($height:25px,$width:auto,$radius:(5px 5px 0 0),$padding:(0 50px 0 50px),$bgcolor:#fff,$color:#000);
+        font-weight: bold;
+    }
+
+}
+.panel_3{
+    .file_upload section{
+        margin-bottom: 10px;
+    }
+}
+.panel_4{
+    .notice_send section{
+        margin-bottom: 10px;
+    }
+    .notice_text{
+        width: 600px;
+        height: 150px;
+        resize: none;
+    }
+}
+.panel_5{
+    .text_editor{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .sure_btn{
+        
+    }
+}
+.sure_btn:hover{
+    color: #ff7;
+    background-color: #5d9;
+}
+.tab_active{
+    background-color: red;
+}
+
+.panel{
+    display: none;
+    font-size: 16px;
+}
+.panel.panel_active{
+    display: block;
+}

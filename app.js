@@ -5,9 +5,11 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var routes = require('./routes/index');
+var pool = require('./model/db');
+var index = require('./routes/index');
 var users = require('./routes/users');
-var handlebars = require('handlebars');
+var admin = require('./routes/admin');
+var handlebars = require('express-handlebars');
 var app = express();
 
 /// 默认布局
@@ -27,8 +29,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));///设置静态文件目录
 
 ///路径解析
-app.use('/', routes);
+app.use('/', index);
 app.use('/users', users);
+app.use('/admin', admin);
 // app.use('/static', express.static('public'));
 
 /// catch 404 and forwarding to error handler

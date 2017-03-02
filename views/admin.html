@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>{{title}}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="1" />
+    <meta name="description" content="1" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/layout.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/ueditor.min.css">
+    {{#if stylesheet}}
+    <link rel="stylesheet" type="text/css" href="/stylesheets/{{stylesheet}}.css">
+    {{/if}}
+    <script src="/javascripts/sea.js" charset="utf-8"></script>
+
+</head>
+
+<body>
+    <div class="wrapper" id="wrap">
+        <nav class="nav_bar clearfix">
+            <ul class="nav_bar_ul">
+                <li><a class="nav_bar_item" href="#index">首页</a></li>
+                <li><a class="nav_bar_item" href="#">党校课堂</a></li>
+                <li><a class="nav_bar_item" href="#">时事</a></li>
+                <li><a class="nav_bar_item" href="#">专题时刊</a></li>
+                <li><a class="nav_bar_item" href="#">个人中心</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <aside class="aside_bar">
+                <ul class="aside_bar_ul">
+                    <li class="aside_bar_item tab_active"><i class="icon"></i>查看成员</li>
+                    <li class="aside_bar_item"><i class="icon"></i>添加成员</li>
+                    <li class="aside_bar_item"><i class="icon"></i>发布视频</li>
+                    <li class="aside_bar_item"><i class="icon"></i>发布通知</li>
+                    <li class="aside_bar_item"><i class="icon"></i>时事时刊</li>
+                </ul>
+            </aside>
+            <div class="aside_content">
+                <div class="aside_content_item">
+                    <div class="panel panel_1">
+                        <div class="choose_bar">
+                            <select class="select_year" name="year">
+                                {{#each option_year}}
+                                <option value="{{this}}">{{this}}</option>
+                                {{/each}}
+                            </select>或者
+                            <select class="select_number" name="year">
+                                {{#each option_number}}
+                                <option value="{{this}}">{{this}}</option>
+                                {{/each}}
+                            </select>
+                            <input class="sure_btn" type="button" name="sure_btn" value="查询成员">
+                        </div>
+                        <div class="choose_content">
+                            <div class="content_nav">
+                                <span class="small_col">姓名</span>
+                                <span class="large_col">学号</span>
+                                <span class="x_small_col">性别</span>
+                                <span class="large_col">手机号码</span>
+                                <span class="small_col">期数</span>
+                                <span class="large_col">入党积极分子</span>
+                                <span class="x_large_col">预备党员</span>
+                                <span class="x_large_col">正式党员</span>
+                                <span class="large_col">身份</span>
+                                <span class="small_col">年级</span>
+                                <span class="large_col">专业班级</span>
+                            </div>
+                            <div class="content_list">
+                                {{#each user}}
+                                <div class="content_item">
+                                    <span class="small_col">{{name}}</span>
+                                    <span class="large_col">{{stu_id}}</span>
+                                    <span class="x_small_col">{{sex}}</span>
+                                    <span class="large_col">{{tel}}</span>
+                                    <span class="small_col">{{number}}</span>
+                                    <span class="large_col">{{year1}}</span>
+                                    <span class="x_large_col">{{year2}}</span>
+                                    <span class="x_large_col">{{year3}}</span>
+                                    <span class="large_col">{{status}}</span>
+                                    <span class="small_col">{{grade}}</span>
+                                    <span class="large_col">{{major}}</span>
+                                </div>
+                                {{/each}}
+                            </div>
+
+                        </div>
+                    </div>
+                     <div class="panel panel_2">
+                        <div class="choose_content clearfix">
+                            <div class="menber_list">
+                                <div class="menber_list_nav">
+                                    <input class="id_input" type="text" name="" value="" placeholder="输入学号">
+                                    <input type="button" class="sure_btn" name="" value="成员搜索">
+                                </div>
+                                <div class="menber_list_result">
+                                    <p>
+                                        <span class="small_col">姓名</span>
+                                        <span class="stu_name large_col">何宇虹</span>
+                                    </p>
+                                    <p>
+                                        <span class="small_col">学号</span>
+                                        <span class="stu_id large_col">201330330103</span>
+                                    </p>
+                                    <p>
+                                        <span class="small_col">专业班级</span>
+                                        <span class="stu_class large_col">13软件工程1班</span>
+                                    </p>
+                                    <p>
+                                        <span class="small_col">性别</span>
+                                        <span class="large_col">女</span>
+                                    </p>
+                                </div>
+                                <input type="button" class="sure_btn" name="" value="添加成员">
+
+                            </div>
+                            <div class="menber_add">
+                                <div class="menber_add_list">
+                                    <p>
+                                        <span class="small_col">何宇虹</span>
+                                        <span class="uid large_col">201330330103</span>
+                                        <span class="large_col">13软件工程1班</span>
+                                    </p>
+                                </div>
+                                <input type="button" class="sure_btn" name="" value="确认添加">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="panel panel_3">
+                        <div class="choose_content">
+                            <div class="file_upload">
+                                <section>
+                                    视频名称：<input type="text" name="" placeholder="视频名称">
+                                </section>
+                                <section>
+                                    视频文件：<input type="file" name="" value="">
+                                </section>
+                            </div>
+                                <input type="button" class="sure_btn" name="" value="确认添加">
+                        </div>
+                    </div>
+                    <div class="panel panel_4">
+                        <div class="choose_content">
+                            <div class="notice_send">
+                                <section>
+                                    通知主题：<input type="text" name="" placeholder="通知主题">
+                                </section>
+                                <section>
+                                    <textarea name="name" class="notice_text"></textarea>
+                                </section>
+                            </div>
+                                <input type="button" class="sure_btn" name="" value="确认添加">
+                        </div>
+                    </div>
+                    <div class="panel panel_5 panel_active">
+                        <div class="choose_content">
+                            <section>
+                                文章题目：<input type="text" name="" placeholder="文章题目">
+                            </section>
+                            <section class="text_editor">
+                                <script id="editor" type="text/plain" style="width:800px;height:300px;"></script>
+                            </section>
+                            <input type="button" class="sure_btn" name="" value="确认添加">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{#if jscript}}
+    <script type="text/javascript">
+        seajs.use("{{jscript}}");
+    </script>
+    {{/if}}
+</body>
+</html>

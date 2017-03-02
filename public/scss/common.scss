@@ -6,7 +6,7 @@
     background-size: 100%;
 }
 
-@mixin btn($height:30px,$width:auto,$radius:0px,$padding:(0 0 0 0),$bgcolor:#fff,$color:#fff) {
+@mixin btn($height:30px,$width:auto,$radius:0px,$padding:(0 0 0 0),$bgcolor:#fff,$color:#000) {
     padding: $padding;
     height: $height;
     line-height: $height;

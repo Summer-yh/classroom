@@ -7,7 +7,7 @@ const fs = require('fs'),
 
 const config = {
     sass: {
-        src: './public/scss/'
+        src: './public/'
     },
     // modjsPath: '../dev/modjs/page/'
 };
