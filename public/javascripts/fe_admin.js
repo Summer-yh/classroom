@@ -13,6 +13,7 @@ define(function(require, exports, module) {
         confirm_men:'',
         dispost:''
     }
+    alert(12)
 
     var admin = {
         init:function () {

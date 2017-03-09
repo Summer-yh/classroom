@@ -39,6 +39,7 @@
     "merge-stream": "^1.0.0",
     "morgan": "~1.0.0",
     "run-sequence": "^1.2.2",
+    "socket.io": "^1.7.3",
     "static-favicon": "~1.0.0",
     "vinyl-buffer": "^1.0.0"
   },

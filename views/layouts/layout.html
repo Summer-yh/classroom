@@ -11,19 +11,19 @@
     {{#if stylesheet}}
     <link rel="stylesheet" type="text/css" href="/stylesheets/{{stylesheet}}.css">
     {{/if}}
-    {{#if jscript}}
-    <link rel="stylesheet" type="text/css" href="/stylesheets/{{jscript}}.css">
-    {{/if}}
+    <script src="/javascripts/sea.js" charset="utf-8"></script>:
 </head>
 
 <body>
     <div class="wrapper" id="wrap">
         <nav class="nav_bar clearfix">
+            <div class="user_nav">
+
+            </div>
             <ul class="nav_bar_ul">
-                <li><a class="nav_bar_item" href="#">首页</a></li>
-                <li><a class="nav_bar_item" href="#">党校课堂</a></li>
-                <li><a class="nav_bar_item" href="#">时事</a></li>
-                <li><a class="nav_bar_item" href="#">专题时刊</a></li>
+                <li><a class="nav_bar_item" href="index.html">首页</a></li>
+                <li><a class="nav_bar_item" href="liveClass.html">党校课堂</a></li>
+                <li><a class="nav_bar_item" href="magazine.html">专题时刊</a></li>
                 <li><a class="nav_bar_item" href="#">个人中心</a></li>
             </ul>
         </nav>
@@ -60,5 +60,11 @@
             {{{body}}}
         </div>
     </div>
+    {{#if jscript}}
+    <script type="text/javascript">
+        seajs.use("{{jscript}}");
+    </script>
+    {{/if}}
+
 </body>
 </html>

@@ -7,7 +7,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var pool = require('./model/db');
 var index = require('./routes/index');
-var users = require('./routes/users');
+var video = require('./routes/video');
 var admin = require('./routes/admin');
 var handlebars = require('express-handlebars');
 var app = express();
@@ -29,9 +29,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));///设置静态文件目录
 
 ///路径解析
-app.use('/', index);
-app.use('/users', users);
+app.use('/PartyLecture', index);
 app.use('/admin', admin);
+app.use('/liveClass', video);
 // app.use('/static', express.static('public'));
 
 /// catch 404 and forwarding to error handler

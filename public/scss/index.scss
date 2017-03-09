@@ -1,1 +1,74 @@
+@import 'common';
+.title_block {
+    float: left;
+    width: 242px;
+    height: 150px;
+}
 
+.class_video {
+    padding: 20px 0;
+    border: 3px solid red;
+    border-radius: 20px;
+    margin-top: 10px;
+    .title_block {
+        @include background('/images/title1.png', $position: 50% 50%);
+    }
+}
+
+.news_point {
+    padding: 20px 0;
+    border: 3px solid red;
+    border-radius: 20px;
+    margin-top: 10px;
+    .title_block {
+        @include background('/images/title2.png', $position: 50% 50%);
+    }
+}
+
+.article {
+    padding: 20px 0;
+    border: 3px solid red;
+    .title_block {
+        @include background('/images/title3.png', $position: 50% 50%);
+    }
+}
+
+.content_block {
+    float: right;
+    width: 750px;
+    height: 150px;
+    overflow: hidden;
+    // border: 1px solid red;
+}
+
+.item_block {
+    position: relative;
+    float: left;
+    width: 180px;
+    height: 150px;
+    margin: 0 3px;
+    .item_img img {
+        width: 180px;
+        height: 120px;
+    }
+    .item_title {
+        height: 30px;
+        line-height: 30px;
+        border: 1px solid blue;
+        text-align: center;
+        background-color: rgba(44, 40, 31, 0.8);
+        color: rgb(216, 255, 0);
+    }
+}
+
+.cover_penal {
+    position: absolute;
+    top: 0px;
+    width: 180px;
+    height: 120px;
+    z-index: 10;
+}
+
+.cover_penal:hover {
+    @include background('/images/cover.png');
+}
