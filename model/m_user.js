@@ -22,7 +22,7 @@ var user = {
             connection.query(sql.login, [param.uid,param.password], function(err, result) {
                 callback(result);
                 // 以json形式，把操作结果返回给前台页面
-                jsonWrite(res, result);
+                // jsonWrite(res, result);
                 // 释放连接
                 connection.release();
             });

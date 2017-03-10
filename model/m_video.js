@@ -11,24 +11,26 @@ var jsonWrite = function (res, ret) {
     }
 };
 var video = {
-    //通过vid查询单个视频信息
     queryVideo:function (req, res, callback) {
         pool.getConnection(function(err, connection) {
             // 建立连接，查询用户
-            connection.query(sql.queryAll, function(err, result) {
+            connection.query(sql.queryAll,function(err, result) {
                 callback(result);
                 // 释放连接
                 connection.release();
             });
         });
     },
-    // selectVideo:function(vid,callback){
-    //     conn.query('SELECT * FROM `video` WHERE `vid`=?',[vid],function(err,res){
-    //         if(err){
-    //             throw err;
-    //         }
-    //         callback(res);
-    //     })
-    // }
+    //通过vid查询单个视频信息
+    selectVideo:function(req,res,vid,callback){
+        pool.getConnection(function(err, connection) {
+            // 建立连接，查询用户
+            connection.query(sql.queryById,[vid],function(err, result) {
+                callback(result);
+                // 释放连接
+                connection.release();
+            });
+        });
+    }
 }
 module.exports = video;

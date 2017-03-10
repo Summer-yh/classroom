@@ -1,31 +1,31 @@
-<script type="text/javascript">
-    $(function(){
-        $("#login1").click(function(){
-            location.href = 'login';
-        });
-        $("#register1").click(function(){
-            var username = $("#username").val();
-            var password = $("#password").val();
-            var password1 = $("#password1").val();
-            if(password !== password1){
-                $("#password").css("border","1px solid red");
-                $("#password1").css("border","1px solid red");
-            }else if(password === password1){
-            var data = {"uname":username,"upwd":password};
-            $.ajax({
-                url: '/register',
-                type: 'post',
-                data: data,
-                success: function(data,status){
-                    if(status == 'success'){
-                        location.href = 'login';
-                    }
+// 所有模块都通过 define 来定义
+define(function(require, exports, module) {
+    var $ = require('jquery');
+    var data = {
+        init:function () {
+            this.setInfo();
+            this.hoverInfo();
+        },
+        setInfo:function () {
+            var data = document.cookie.split(',');
+            console.log(data);
+            $('.nav_bar_item').val(data.username);
+            // $('.class_number').val() = document.cookie.intergral;
+            // $('.class_done').val() = document.cookie.number;
+            // $('.user_status').val() = document.cookie.status;
+            // $('.nav_bar_item').val();
+        },
+        hoverInfo:function () {
+            $(".user_nav").hover(
+                function () {
+                    $('.user_section').show();
                 },
-                error: function(data,err){
-                        location.href = 'register';
+                function () {
+                    $('.user_section').hide();
                 }
-            });
+            );
         }
-        });
-    });
-</script>
+    }
+    data.init();
+
+});

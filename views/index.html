@@ -1,9 +1,9 @@
 <div class="class_video clearfix">
     <div class="title_block"></div>
     <div class="content_block clearfix">
-        {{#each waha}}
+        {{#each data}}
         <section class="item_block">
-            <a href="http://127.0.0.1:3000/liveClass/{{this.vid}}.html" data-v = "{{this.path}}" target="_blank">
+            <a href="../liveClass/{{this.vid}}.html?vid={{this.vid}}" target="_blank">
                 <div class="item_img"><img src="/video/cover/{{this.cover}}"></div>
                 <section class="cover_penal"></section>
             </a>
