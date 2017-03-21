@@ -1,5 +1,7 @@
 var express = require('express');
 var router = express.Router();
+var m_user = require('../model/m_user');
+
 
 /* GET users admin page. */
 router.get('/index.html', function(req, res) {
@@ -37,5 +39,18 @@ router.get('/index.html', function(req, res) {
           major:'软件工程1班'
         }]
 });
+});
+
+
+router.post('/searchMenber', function(req, res, next) {
+    // var param = req.body;
+    m_user.searchMenber(uid,function(result){
+        if(result.length > 0) {
+            res.json(result);
+            res.redirect('/PartyLecture/index.html');
+        } else{
+            res.redirect('/PartyLecture/login.html');
+        }
+    });
 });
 module.exports = router;

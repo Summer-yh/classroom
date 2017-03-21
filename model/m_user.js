@@ -51,13 +51,17 @@ var user = {
     // }
 
     //查询成员
-    // searchMenber:function (number,callback) {
-    //     conn.query('SELECT * FROM `user` WHERE `uid`=?',[number],function(){
-    //         if (err) {
-    //             throw err;
-    //         }
-    //         callback(res);
-    //     })
-    // }
+    searchMenber:function (uid,callback) {
+        pool.getConnection(function(err, connection) {
+            // 建立连接，查询用户
+            connection.query(sql.queryById, [uid], function(err, result) {
+                callback(result);
+                // 以json形式，把操作结果返回给前台页面
+                jsonWrite(res, result);
+                // 释放连接
+                connection.release();
+            });
+        });
+}
 }
 module.exports = user;

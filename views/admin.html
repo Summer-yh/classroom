@@ -20,10 +20,9 @@
     <div class="wrapper" id="wrap">
         <nav class="nav_bar clearfix">
             <ul class="nav_bar_ul">
-                <li><a class="nav_bar_item" href="#index">首页</a></li>
-                <li><a class="nav_bar_item" href="#">党校课堂</a></li>
-                <li><a class="nav_bar_item" href="#">时事</a></li>
-                <li><a class="nav_bar_item" href="#">专题时刊</a></li>
+                <li><a class="nav_bar_item" href="http://localhost:3000/PartyLecture/index.html">首页</a></li>
+                <li><a class="nav_bar_item" href="http://localhost:3000/PartyLecture/videoCollection.html">党校课堂</a></li>
+                <li><a class="nav_bar_item" href="http://localhost:3000/PartyLecture/newsCollection.html">专题时刊</a></li>
                 <li><a class="nav_bar_item" href="#">个人中心</a></li>
             </ul>
         </nav>
@@ -39,13 +38,10 @@
             </aside>
             <div class="aside_content">
                 <div class="aside_content_item">
-                    <div class="panel panel_1">
+                    <div class="panel panel_1 panel_active">
                         <div class="choose_bar">
-                            <select class="select_year" name="year">
-                                {{#each option_year}}
-                                <option value="{{this}}">{{this}}</option>
-                                {{/each}}
-                            </select>或者
+                            <input class="userId" type="text" name="uid" value="" placeholder="请输入学号">
+                            或者
                             <select class="select_number" name="year">
                                 {{#each option_number}}
                                 <option value="{{this}}">{{this}}</option>
@@ -60,12 +56,11 @@
                                 <span class="x_small_col">性别</span>
                                 <span class="large_col">手机号码</span>
                                 <span class="small_col">期数</span>
-                                <span class="large_col">入党积极分子</span>
+                                <!-- <span class="large_col">入党积极分子</span>
                                 <span class="x_large_col">预备党员</span>
                                 <span class="x_large_col">正式党员</span>
                                 <span class="large_col">身份</span>
-                                <span class="small_col">年级</span>
-                                <span class="large_col">专业班级</span>
+                                <span class="small_col">专业班级</span> -->
                             </div>
                             <div class="content_list">
                                 {{#each user}}
@@ -75,12 +70,11 @@
                                     <span class="x_small_col">{{sex}}</span>
                                     <span class="large_col">{{tel}}</span>
                                     <span class="small_col">{{number}}</span>
-                                    <span class="large_col">{{year1}}</span>
+                                    <!-- <span class="large_col">{{year1}}</span>
                                     <span class="x_large_col">{{year2}}</span>
                                     <span class="x_large_col">{{year3}}</span>
                                     <span class="large_col">{{status}}</span>
-                                    <span class="small_col">{{grade}}</span>
-                                    <span class="large_col">{{major}}</span>
+                                    <span class="small_col">{{grade}}</span> -->
                                 </div>
                                 {{/each}}
                             </div>
@@ -154,7 +148,7 @@
                                 <input type="button" class="sure_btn" name="" value="确认添加">
                         </div>
                     </div>
-                    <div class="panel panel_5 panel_active">
+                    <div class="panel panel_5">
                         <div class="choose_content">
                             <section>
                                 文章题目：<input type="text" name="" placeholder="文章题目">

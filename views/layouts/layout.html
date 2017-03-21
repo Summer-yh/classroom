@@ -50,11 +50,13 @@
             {{{body}}}
         </div>
     </div>
-    {{#if jscript}}
     <script type="text/javascript">
-        seajs.use("{{jscript}}");
-    </script>
+    seajs.use("/javascripts/index.js");
+    {{#if jscript}}
+    seajs.use("{{jscript}}");
     {{/if}}
+
+    </script>
 
 </body>
 </html>
