@@ -8,17 +8,16 @@ define(function(require, exports, module) {
 
     var url = {
         search_men:'',
-        search_id:'',
+        search_id:'/admin/searchMenber',
         add_men:'',
         confirm_men:'',
         dispost:''
     }
-    alert(12)
 
     var admin = {
         init:function () {
             this.switch ($('.aside_bar_item'),$('.panel'));
-            // this.searchMenber();
+            this.searchMenberById();
         },
         switch:function(node,block){
             var panel = block;
@@ -44,7 +43,7 @@ define(function(require, exports, module) {
                 data:data,
                 timeout:5000,    //超时时间
                 // dataType:'json',    //返回的数据格式：json/xml/html/script/jsonp/text
-                success:function(res,callback){
+                success:function(res){
                     callback(res);
                 },
                 error:function(err,textStatus){
@@ -73,6 +72,7 @@ define(function(require, exports, module) {
             })
         },
         addMenber:function (event) {
+            var that = this;
             $('.menber_list .sure_btn').click(function(){
                 event.stopPropagation();
                 var data = {
@@ -80,23 +80,27 @@ define(function(require, exports, module) {
                     uid:$('.menber_list .stu_uid').val(),
                     class:$('.menber_list .stu_class').val()
                 };
-                this.getData(url.add_men,'POST',data,function (res) {
+                that.getData(url.add_men,'POST',data,function (res) {
                     console.log('已提交')
                 })
             })
         },
-        search_id:function (event) {
-            $('.menber_list_nav .sure_btn').click(function(){
-                event.stopPropagation();
+        searchMenberById:function () {
+            var that = this;
+            $('.search_by_id').click(function(){
                 var data = {
-                    uid:$('.menber_list_nav .id_input').val()
+                    uid:$('.panel_1 .id_input').val()
                 };
-                this.getData(url.search_id,'GET',data,function (res) {
-                    var template = Handlebars.compile($('.panel_2 .menber_list_result').html());
+                that.getData(url.search_id,'GET',data,function (res) {
+                    var source   = $("#some_template").html();
+    var template = Handlebars.compile(source);
+                    // console.log(res);
+                    // var template = Handlebars.Compile($('.panel_2 .menber_list_result').html());
+                    console.log(template);
                     //匹配json内容
-                    var html = template(res);
+                    // var html = template(res);
                     //输入模板
-                    $('.panel_2 .content_list').empty().append(html);
+                    // $('.panel_2 .content_list').empty().append(html);
                 })
             })
         },

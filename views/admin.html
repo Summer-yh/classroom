@@ -20,13 +20,13 @@
     <div class="wrapper" id="wrap">
         <nav class="nav_bar clearfix">
             <ul class="nav_bar_ul">
-                <li><a class="nav_bar_item" href="http://localhost:3000/PartyLecture/index.html">首页</a></li>
-                <li><a class="nav_bar_item" href="http://localhost:3000/PartyLecture/videoCollection.html">党校课堂</a></li>
-                <li><a class="nav_bar_item" href="http://localhost:3000/PartyLecture/newsCollection.html">专题时刊</a></li>
+                <li><a class="nav_bar_item" href="/PartyLecture/index.html">首页</a></li>
+                <li><a class="nav_bar_item" href="/PartyLecture/videoCollection.html">党校课堂</a></li>
+                <li><a class="nav_bar_item" href="/PartyLecture/newsCollection.html">专题时刊</a></li>
                 <li><a class="nav_bar_item" href="#">个人中心</a></li>
             </ul>
         </nav>
-        <div class="container">
+        <div class="container clearfix">
             <aside class="aside_bar">
                 <ul class="aside_bar_ul">
                     <li class="aside_bar_item tab_active"><i class="icon"></i>查看成员</li>
@@ -40,14 +40,16 @@
                 <div class="aside_content_item">
                     <div class="panel panel_1 panel_active">
                         <div class="choose_bar">
-                            <input class="userId" type="text" name="uid" value="" placeholder="请输入学号">
+                            <input class="id_input" type="text" name="uid" value="" placeholder="请输入学号">
+                            <input class="search_by_id sure_btn" type="button" name="sure_btn" value="查询成员">
                             或者
                             <select class="select_number" name="year">
                                 {{#each option_number}}
                                 <option value="{{this}}">{{this}}</option>
                                 {{/each}}
                             </select>
-                            <input class="sure_btn" type="button" name="sure_btn" value="查询成员">
+                            <input class="search_by_number sure_btn" type="button" name="sure_btn" value="查询成员">
+
                         </div>
                         <div class="choose_content">
                             <div class="content_nav">
@@ -63,7 +65,7 @@
                                 <span class="small_col">专业班级</span> -->
                             </div>
                             <div class="content_list">
-                                {{#each user}}
+                                <!-- {{#each user}}
                                 <div class="content_item">
                                     <span class="small_col">{{name}}</span>
                                     <span class="large_col">{{stu_id}}</span>
@@ -75,8 +77,20 @@
                                     <span class="x_large_col">{{year3}}</span>
                                     <span class="large_col">{{status}}</span>
                                     <span class="small_col">{{grade}}</span> -->
-                                </div>
-                                {{/each}}
+                                <!-- </div> -->
+                                <!-- {{/each}} --> -->
+                                <script id="some_template" type="text/x-handlebars-template">
+                                    <span class="small_col">{{name}}</span>
+                                    <span class="large_col">{{stu_id}}</span>
+                                    <span class="x_small_col">{{sex}}</span>
+                                    <span class="large_col">{{tel}}</span>
+                                    <span class="small_col">{{number}}</span>
+                                    <!-- <span class="large_col">{{year1}}</span>
+                                    <span class="x_large_col">{{year2}}</span>
+                                    <span class="x_large_col">{{year3}}</span>
+                                    <span class="large_col">{{status}}</span>
+                                    <span class="small_col">{{grade}}</span> -->
+                                </script>
                             </div>
 
                         </div>

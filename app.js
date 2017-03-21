@@ -9,6 +9,7 @@ var pool = require('./model/db');
 var index = require('./routes/index');
 var video = require('./routes/video');
 var admin = require('./routes/admin');
+var login = require('./routes/login');
 var handlebars = require('express-handlebars');
 var app = express();
 
@@ -31,7 +32,8 @@ app.use(express.static(path.join(__dirname, 'public')));///设置静态文件目
 ///路径解析
 app.use('/PartyLecture', index);
 app.use('/admin', admin);
-app.use('/liveClass', video);
+app.use('/videoWatching', video);
+app.use('/login', login);
 // app.use('/static', express.static('public'));
 
 /// catch 404 and forwarding to error handler

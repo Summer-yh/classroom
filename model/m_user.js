@@ -51,13 +51,12 @@ var user = {
     // }
 
     //查询成员
-    searchMenber:function (uid,callback) {
+    searchMenberById:function (uid,callback) {
         pool.getConnection(function(err, connection) {
             // 建立连接，查询用户
             connection.query(sql.queryById, [uid], function(err, result) {
                 callback(result);
-                // 以json形式，把操作结果返回给前台页面
-                jsonWrite(res, result);
+                console.log(result);
                 // 释放连接
                 connection.release();
             });

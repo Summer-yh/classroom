@@ -42,14 +42,13 @@ router.get('/index.html', function(req, res) {
 });
 
 
-router.post('/searchMenber', function(req, res, next) {
-    // var param = req.body;
-    m_user.searchMenber(uid,function(result){
+router.get('/searchMenber', function(req, res, next) {
+    var uid = req.query.uid;
+    m_user.searchMenberById(uid,function(result){
         if(result.length > 0) {
-            res.json(result);
-            res.redirect('/PartyLecture/index.html');
+            res.send(result);
         } else{
-            res.redirect('/PartyLecture/login.html');
+            // res.redirect('/PartyLecture/login.html');
         }
     });
 });

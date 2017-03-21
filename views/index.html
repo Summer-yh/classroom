@@ -3,7 +3,7 @@
     <div class="content_block clearfix">
         {{#each data}}
         <section class="item_block">
-            <a href="../liveClass/{{this.vid}}.html?vid={{this.vid}}" target="_blank">
+            <a href="http://hyh.liveclass.com:3000/videoWatching/{{this.vid}}.html?vid={{this.vid}}" target="_blank">
                 <div class="item_img"><img src="/video/cover/{{this.cover}}"></div>
                 <section class="cover_penal"></section>
             </a>
@@ -12,12 +12,12 @@
         {{/each}}
     </div>
 </div>
-<!-- <div class="news_point clearfix">
+<div class="news_point clearfix">
     <div class="title_block"></div>
     <div class="content_block clearfix">
         {{#each waha}}
         <section class="item_block">
-            <a href="http://127.0.0.1:3000/liveClass/{{this.id}}.html" target="_blank">
+            <a href="http://hyh.liveclass.com:3000/articleReading/{{this.aid}}.html?vid={{this.aid}}" target="_blank">
                 <div class="item_img"><img src="{{this.content}}"></div>
                 <section class="cover_penal"></section>
             </a>
@@ -26,17 +26,3 @@
         {{/each}}
     </div>
 </div>
-<div class="article clearfix">
-    <div class="title_block"></div>
-    <div class="content_block clearfix">
-        {{#each waha}}
-        <section class="item_block">
-            <a href="http://127.0.0.1:3000/liveClass/{{this.id}}.html" target="_blank">
-                <div class="item_img"><img src="{{this.content}}"></div>
-                <section class="cover_penal"></section>
-            </a>
-            <div class="item_title">{{this.title}}</div>
-        </section>
-        {{/each}}
-    </div>
-</div> -->
