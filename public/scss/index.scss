@@ -1,24 +1,33 @@
 @import 'common';
 .title_block {
     float: left;
-    width: 242px;
+    width: 285px;
     height: 150px;
+    margin-left: 20px;
+    border:2px solid #4CDA43;
+    border-radius: 8px;
 }
 
 .class_video {
-    padding: 20px 0;
-    border: 3px solid red;
-    border-radius: 20px;
+    padding: 20px 0 30px;
     margin-top: 10px;
+    @include background('/images/shadow.png', $position: 30px 69px);
     .title_block {
         @include background('/images/title1.png', $position: 50% 50%);
     }
 }
-
+.nav_bar {
+    top: 160px;
+}
+.container{
+    height: 415px;
+    top:250px;
+    left: 410px;
+    border:2px solid #fff;
+    border-radius: 15px;
+}
 .news_point {
     padding: 20px 0;
-    border: 3px solid red;
-    border-radius: 20px;
     margin-top: 10px;
     .title_block {
         @include background('/images/title2.png', $position: 50% 50%);
@@ -37,6 +46,7 @@
     float: right;
     width: 750px;
     height: 150px;
+    margin-right: 20px;
     overflow: hidden;
     // border: 1px solid red;
 }

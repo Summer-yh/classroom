@@ -47,44 +47,23 @@
     cursor: pointer;
     border: 1px solid #555;
 }
-
-.content_nav,.content_item{
-    height: 30px;
-    line-height: 30px;
-    border: 1px solid red;
-
-}
-.choose_content span+span{
-    border-right: 1px solid yellow;
-
-}
-.x_small_col{
+.small_col{
     display: inline-block;
     width: 40px;
     text-align: center;
     border: 1px solid red;
-
 }
-.small_col{
+.middle_col{
     display: inline-block;
-    width: 60px;
+    width: 70px;
     text-align: center;
     border: 1px solid red;
-
-
-}
-.x_large_col{
-    display: inline-block;
-    width: 80px;
-    text-align: center;
-    border: 1px solid red;
-
 }
 .large_col{
     display: inline-block;
-    width: 105px;
+    width: 110px;
     text-align: center;
-
+    border: 1px solid red;
 }
 .panel_2{
     .menber_list{

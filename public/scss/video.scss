@@ -5,13 +5,16 @@ body {
 
 .watching {
     position: relative;
-    width: 1000px;
+    width: 900px;
     height: 20px;
-    border: 1px solid blue;
+    // border: 1px solid blue;
     margin: auto;
     position: relative;
+    left: 576px;
+    top: 80px;
     padding-bottom: 50.25%;
     overflow: hidden;
+    // background-color: #FDFD98;
 }
 
 #myVideo {
@@ -25,7 +28,7 @@ body {
 .control_bar {
     // display: none;
     position: absolute;
-    top: 590px;
+    top: 541px;
     width: 100%;
     height: 35px;
     background-color: #ff9;
@@ -77,4 +80,19 @@ body {
 .watching video::-webkit-media-controls-enclosure {
     /*禁用播放器控制栏的样式*/
     display: none !important;
+}
+.nav_bar_ul {
+    width: 120px;
+    left:405px;
+    top: 330px;
+}
+
+.nav_bar_item {
+    display: block;
+    margin: 20px 0;
+}
+.nav_bar .user_nav{
+    left:450px;
+    top:260px;
+
 }

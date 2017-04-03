@@ -1,7 +1,7 @@
 <div class="class_video clearfix">
     <div class="title_block"></div>
     <div class="content_block clearfix">
-        {{#each data}}
+        {{#each video}}
         <section class="item_block">
             <a href="http://hyh.liveclass.com:3000/videoWatching/{{this.vid}}.html?vid={{this.vid}}" target="_blank">
                 <div class="item_img"><img src="/video/cover/{{this.cover}}"></div>
@@ -15,7 +15,7 @@
 <div class="news_point clearfix">
     <div class="title_block"></div>
     <div class="content_block clearfix">
-        {{#each waha}}
+        {{#each article}}
         <section class="item_block">
             <a href="http://hyh.liveclass.com:3000/articleReading/{{this.aid}}.html?vid={{this.aid}}" target="_blank">
                 <div class="item_img"><img src="{{this.content}}"></div>
