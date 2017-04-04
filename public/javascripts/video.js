@@ -45,7 +45,7 @@ define(function(require, exports, module) {
         },
         //全屏
         fullScreen: function() {
-            $('.full_screen').click(function() {
+            $('.full_btn').click(function() {
                 console.log($video);
                 //For Webkit
                 if ($video.webkitEnterFullscreen) {

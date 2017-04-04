@@ -37,44 +37,52 @@ body {
 
 .paused {
     width: 100px;
-    height: 30px;
-    line-height: 30px;
+    height: 28px;
+    line-height: 28px;
     text-align: center;
-    border: 1px solid blue;
+    border: 2px solid #fff;
+    background-color: #4CDA43;
     cursor: pointer;
 }
 
 .timer {
     position: absolute;
-    left: 100px;
+    left: 102px;
     top: 0px;
     width: 150px;
-    height: 32px;
-    line-height: 32px;
+    height: 28px;
+    line-height: 28px;
     text-align: center;
-    border: 1px solid blue;
+    background-color: #4CDA43;
+    border: 2px solid #fff;
+}
+.full_screen{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 160px;
+    height: 28px;
+    padding-left: 10px;
+    line-height: 30px;
+    background-color: #4CDA43;
+    border: 2px solid #fff;
 }
 
-.full_screen {
+.full_btn {
     position: absolute;
-    right: 20px;
-    top: 5px;
-    width: 20px;
-    height: 20px;
-    line-height: 32px;
-    border: 1px solid blue;
+    right: 10px;
+    top: 3px;
+    width: 22px;
+    height: 22px;
+    // border: 1px solid blue;
+    background-color: #fff;
     cursor: pointer;
     @include background('/images/full.png');
 }
 
 .tip_text {
-    position: absolute;
-    right: 50px;
-    top: 0px;
-    width: 150px;
-    height: 32px;
-    line-height: 32px;
     color: red;
+    font-size: 14px;
 }
 
 .watching video::-webkit-media-controls-enclosure {
@@ -95,4 +103,8 @@ body {
     left:450px;
     top:260px;
 
+}
+.user_section {
+    left: 369px;
+    top: 310px;
 }
