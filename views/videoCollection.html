@@ -1,12 +1,26 @@
-<div class="class_video clearfix">
-    <div class="content_block clearfix">
-        {{#each waha}}
-        <section class="item_block">
-            <a href="http://127.0.0.1:3000/liveClass/{{this.id}}.html" target="_blank">
-                <div class="item_img"><img src="{{this.content}}"></div>
+<div class="class_video no_bg clearfix">
+    <aside class="">
+        <div class="choose_bar">
+            <select class="select_number" name="year">
+                {{#each number}}
+                <option value="{{this}}">第{{this}}期</option>
+                {{/each}}
+            </select>
+            <input class="search_by_number sure_btn" type="button" name="sure_btn" value="查询课程">
+
+        </div>
+        <div class="class_info">
+            沙发上峰回路转上的花费到鬼的空间发生过葫芦岛市然rhgiawefehfweufhseif
+        </div>
+    </aside>
+    <div class="content_block scoll clearfix">
+        {{#each video}}
+        <section class="item_block video_section">
+            <a href="http://hyh.liveclass.com:3000/practice/videoWatching/{{this.vid}}.html?vid={{this.vid}}" target="_blank">
+                <div class="item_img"><img src="/video/cover/{{this.cover}}"></div>
                 <section class="cover_penal"></section>
             </a>
-            <div class="item_title">{{this.title}}</div>
+            <div class="item_title">{{this.vname}}</div>
         </section>
         {{/each}}
     </div>

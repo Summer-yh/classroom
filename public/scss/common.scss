@@ -40,3 +40,14 @@ body {
     margin: auto;
     // border:1px solid red;
 }
+.sure_btn{
+    margin: 10px auto;
+    @include btn($height:25px,$width:auto,$radius:(5px 5px 0 0),$padding:(0 20px 0 20px),$bgcolor:#fff,$color:#000);
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid #555;
+}
+.sure_btn:hover{
+    color: #ff7;
+    background-color: #5d9;
+}

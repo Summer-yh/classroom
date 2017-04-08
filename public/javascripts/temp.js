@@ -15,7 +15,12 @@ define(function(require, exports, module) {
             '<p><span class="small_col">专业班级</span><span class="stu_class large_col">{{class}}</span></p>'+
             '<p><span class="small_col">性别</span><span class="large_col">{{sex}}</span></p>'+
             '<p><span class="large_col">手机号码</span><span class="large_col">{{tel}}</span></p>',
-        m3:'<p><span class="small_col">{{userName}}</span><span class="uid large_col">{{uid}}</span><span class="large_col">{{class}}</span></p>'
+        m3:'<p><span class="small_col">{{userName}}</span><span class="uid large_col">{{uid}}</span><span class="large_col">{{class}}</span></p>',
+        m4:'<section class="item_block video_section">'+
+            '<a href="http://hyh.liveclass.com:3000/videoWatching/{{vid}}.html?vid={{vid}}" target="_blank">'+
+                '<div class="item_img"><img src="/video/cover/{{cover}}"></div>'+
+                '<section class="cover_penal"></section></a>'+
+            '<div class="item_title">{{vname}}</div>'
     };
     // 或者通过 module.exports 提供整个接口
     module.exports = temp;

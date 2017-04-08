@@ -62,24 +62,6 @@ define(function(require, exports, module) {
                 }
             })
         },
-        // searchMenber:function (event) {
-        //     // var year = $('.select_year').value();
-        //     // var number = $('.select_number').value();
-        //     $('.panel_1 .sure_btn').click(function(){
-        //         event.stopPropagation();
-        //         var data = {
-        //             year:$('.panel_1 .select_year').val(),
-        //             number:$('.panel_1 .select_number').val()
-        //         };
-        //         this.getData(url.search_men,'GET',data,function (res) {
-        //             var template = handlebars.Compile($('.panel_1 .content_item').html());
-        //             //匹配json内容
-        //             var html = template(res);
-        //             //输入模板
-        //             $('.panel_1 .content_list').empty().append(html);
-        //         })
-        //     })
-        // },
         addMenber:function (event) {
             var that = this;
             $('.add_single').click(function(){

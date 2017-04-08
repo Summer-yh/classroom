@@ -32,7 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')));///设置静态文件目
 ///路径解析
 app.use('/PartyLecture', index);
 app.use('/admin', admin);
-app.use('/videoWatching', video);
+app.use('/practice', video);
 app.use('/login', login);
 // app.use('/static', express.static('public'));
 
