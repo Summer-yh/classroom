@@ -33,10 +33,14 @@ router.get('/articleReading/:id.html', function(req, res) {
         if(result.length > 0) {
             var articleTitle = result[0].title;
             var author = result[0].author;
-            var time = result[0].time;
+            var content = result[0].content;
+            var year = result[0].time.getFullYear();
+            var month = result[0].time.getMonth()+1;
+            var date = result[0].time.getDate();
+            var time = year + '年' + month +'月' + date + '日';
             var read = result[0].readNumber;
             var newRead = read + 1;
-            m_video.updateReadById(aid,newRead,function (result) {
+            m_video.updateReadById(aid,'2016-1-22',function (result) {
                 if(result.affectedRows>0){
                     console.log('更新成功');
                 }
@@ -47,6 +51,7 @@ router.get('/articleReading/:id.html', function(req, res) {
                 author: author,
                 time: time,
                 read: read,
+                content: content,
                 stylesheet: 'video',
                 jscript:''
             });

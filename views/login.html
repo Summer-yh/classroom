@@ -1,8 +1,23 @@
-<div class="login_box">
-    <h1>登录</h1>
-    <form action="/PartyLecture/login" method="post">
-            <p>学号 <input type="text" name="uid" required="required"></p>
-            <p>密码： <input type="password" name="password" required="required"></p>
-            <p><input type="submit" name="submit" value="submit"></p>
-    </form>
-</div>
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>{{title}}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="1" />
+    <meta name="description" content="1" />
+    {{#if stylesheet}}
+    <link rel="stylesheet" type="text/css" href="/stylesheets/{{stylesheet}}.css">
+    {{/if}}
+</head>
+<body>
+    <div class="login_box">
+        <h1>登录</h1>
+        <form action="/PartyLecture/login" method="post">
+            <p class="user_info">学号：<input type="text" name="uid" required="required"></p>
+            <p class="user_info">密码：<input type="password" name="password" required="required"></p>
+            <p class="user_info"><input class="submit_btn" type="submit" name="submit" value="登录"></p>
+        </form>
+    </div>
+</body>
+</html>

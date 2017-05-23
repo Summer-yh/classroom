@@ -31,6 +31,16 @@ router.get('/index.html', function(req, res) {
     });
 });
 
+router.get('/classSystem.html', function(req, res) {
+    res.render('classSystem', {
+        title: '课程管理员',
+        stylesheet: 'classSystem',
+        jscript:'fe_admin',
+        layout:false,
+        option_year:['2017','2016','2015'],
+        option_number:['18','19','20']
+    });
+});
 
 router.get('/searchMenber', function(req, res, next) {
     var uid = req.query.uid;

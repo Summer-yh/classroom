@@ -1,0 +1,23 @@
+body{
+    background-image: url('/images/login.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.login_box{
+    position: absolute;
+    left: 435px;
+    top: 190px;
+    width: 500px;
+    height: 250px;
+    border: 2px solid #5d9;
+    h1,.user_info{
+        text-align: center;
+    }
+    .submit_btn{
+        background-color: #5d9;
+        border: 2px solid red;
+        padding:2px 30px;
+        font-size: 18px;
+        border-radius: 10px;
+    }
+}

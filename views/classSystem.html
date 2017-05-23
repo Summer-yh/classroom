@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>{{title}}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="1" />
+    <meta name="description" content="1" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/layout.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/ueditor.min.css">
+    {{#if stylesheet}}
+    <link rel="stylesheet" type="text/css" href="/stylesheets/{{stylesheet}}.css">
+    {{/if}}
+    <script src="/javascripts/sea.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <div class="wrapper" id="wrap">
+        <nav class="nav_bar clearfix">
+            <ul class="nav_bar_ul">
+                <li><a class="nav_bar_item" href="/PartyLecture/index.html">首页</a></li>
+                <li><a class="nav_bar_item" href="/PartyLecture/videoCollection.html">党校课堂</a></li>
+                <li><a class="nav_bar_item" href="/PartyLecture/newsCollection.html">专题时刊</a></li>
+                <!-- <li><a class="nav_bar_item" href="#">个人中心</a></li> -->
+            </ul>
+        </nav>
+        <div class="container clearfix">
+            <aside class="aside_bar">
+                <ul class="aside_bar_ul">
+                    <li class="aside_bar_item tab_active"><i class="icon"></i>期末考试卷</li>
+                    <li class="aside_bar_item"><i class="icon"></i>发布视频</li>
+                </ul>
+            </aside>
+            <div class="aside_content">
+                <p class="timu">客观题题量：<input type="text" name="" value=""></p>
+                <div class="timu1 btn">
+                    添加主观题
+                </div>
+                <p class="timu2"><span class="wa">题目描述：</span><textarea>   </textarea></p>
+                <p class="timu3"><span class="wa">参考答案：</span><textarea>   </textarea></p>
+            </div>
+            <div class="btn1">
+                确认提交
+            </div>
+            <!-- <div class="aside_content">
+                <div class="video_block">
+                    课程名称：<input type="text" name="" value=""></br>
+                    视频文件：<input type="text" name="" value="">
+                    <input type="file" class="aa" name="" value="选择视频"></br>
+                    <div class="btn">
+                        添加定点小测
+                    </div>
+                </div>
+                <div class="tip">
+                    <input type="radio" name="" value="">是否发送课程更新短信通知
+                </div>
+                <div class="test">
+                    <p>
+                        题目类型：
+                        <select >
+                            <option value="选择题" choose>选择题</option>
+                            <option value="判断题">判断题</option>
+                        </select>
+                    </p>
+                    <p>时间点：<input type="text" name="" value=""></p>
+                    <p><span class="wa">题目：</span><textarea>   </textarea></p>
+                    <p>答案：<input type="text" name="" value=""></p>
+                    选项：<br />
+                    A、<input name="radio1" type="text" value="贪污腐败"><br />
+                    B、<input name="radio1" type="text" value="脱离群众"><br />
+                    C、<input name="radio1" type="text" value="思想堕落"><br />
+                    D、<input name="radio1" type="text" value="执政经验欠缺"><br />
+
+
+                </div>-->
+            </div>
+        </div>
+    </div>
+    <!-- {{#if jscript}}
+    <script type="text/javascript">
+        seajs.use("{{jscript}}");
+    </script>
+    {{/if}} -->
+
+</body>
+</html>

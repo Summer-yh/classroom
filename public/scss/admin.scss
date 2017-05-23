@@ -1,18 +1,22 @@
 @import 'common';
+.container{
+    left: 380px;
+    top: 280px;
+}
 .aside_bar{
     position: fixed;
-    float: left;
-    width: 250px;
-    border: 1px solid red;
+    top: 280px;
+    width: 200px;
+    // border: 1px solid red;
 }
 .aside_content{
     float: right;
-    width: 900px;
+    width: 850px;
     height: 100%;
-    border: 1px solid blue;
+    border: 2px solid #fff;
 }
 .aside_bar_item{
-    border: 1px solid yellow;
+    border: 1px solid red;
     text-align: center;
     font-size: 20px;
     cursor: pointer;
@@ -28,6 +32,12 @@
     height: 20px;
     vertical-align: middle;
     @include background('/images/1.jpg');
+}
+.panel_1{
+    .content_list p span{
+        margin-right: 5px;
+        margin-top: 10px;
+    }
 }
 .aside_content_item{
     padding:20px 10px;
@@ -76,7 +86,8 @@
             padding: 5px 0;
         }
         .large_col{
-            width: 250px;
+            width: 150px;
+            margin-right: 10px;
 
         }
         .small_col{
@@ -149,7 +160,7 @@
     background-color: #5d9;
 }
 .tab_active{
-    background-color: red;
+    background-color: #FDFD98;
 }
 
 .panel{

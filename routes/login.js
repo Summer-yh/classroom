@@ -3,10 +3,11 @@ var router = express.Router();
 var m_user = require('../model/m_user');
 
 /* GET users login page. */
-router.get('/login.html', function(req, res) {
+router.get('/index.html', function(req, res) {
     res.render('login', {
         title: '登陆页面',
         stylesheet: 'login',
+        layout:false,
         jscript:'login'
     });
 });
